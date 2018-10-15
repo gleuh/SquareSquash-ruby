@@ -13,4 +13,6 @@ group :development do
 
   # DEVELOPMENT
   gem 'juwelier', github: 'flajann2/juwelier'
+
+  gem 'byebug'
 end

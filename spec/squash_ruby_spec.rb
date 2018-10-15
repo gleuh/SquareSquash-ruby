@@ -170,11 +170,9 @@ describe Squash::Ruby do
       before(:each) { Squash::Ruby.configure disable_failsafe: true }
 
       it "should convert variables to complex value hashes" do
-        yaml = (defined?(JRuby) && RUBY_VERSION >= '1.9.0') ? "--- !ruby/regexp '/Hello, world!/'\n" : "--- !ruby/regexp /Hello, world!/\n"
-        yaml << "...\n" if RUBY_VERSION >= '1.9.0' && !defined?(JRuby)
         expect(Squash::Ruby.valueify(/Hello, world!/)).to eql("language"   => "ruby",
                                                               "inspect"    => "/Hello, world!/",
-                                                              "yaml"       => yaml,
+                                                              "yaml"       => "--- !ruby/regexp /Hello, world!/\n",
                                                               "class_name" => "Regexp",
                                                               "json"       => "\"(?-mix:Hello, world!)\"",
                                                               "to_s"       => "(?-mix:Hello, world!)")
