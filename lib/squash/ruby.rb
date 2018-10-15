@@ -48,7 +48,7 @@ module Squash
     # Types that are serialized directly to JSON, rather than to a hash of
     # object information. Subclasses are not considered members of this array.
     JSON_NATIVE_TYPES        = [String, NilClass, TrueClass, FalseClass, Integer,
-                                Fixnum, Float]
+                                Float]
     # Array of user-data fields that should be moved out of the user data to
     # become top-level attributes. A Rails client library would expand this
     # constant to include Rails-specific fields, for example.

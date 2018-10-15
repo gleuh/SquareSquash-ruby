@@ -97,7 +97,7 @@ data directly in the exception constructor:
 require 'squash/ruby/exception_additions'
 
 def process_value(value)
-  raise ArgumentError.new("value must be a number", value: value) unless value.kind_of?(Fixnum)
+  raise ArgumentError.new("value must be a number", value: value) unless value.kind_of?(Integer)
   # [...]
 end
 ````
