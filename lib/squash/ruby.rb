@@ -592,6 +592,8 @@ module Squash
     def self.valueify(instance, elements_only=false)
       if JSON_NATIVE_TYPES.any? { |klass| instance.class == klass }
         instance
+      elsif instance.class = ::Fixnum
+        instance
       elsif instance.kind_of?(Hash) && elements_only
         instance.inject({}) { |hsh, (k, v)| hsh[k.to_s] = valueify(v); hsh }
       elsif instance.kind_of?(Array) && elements_only
