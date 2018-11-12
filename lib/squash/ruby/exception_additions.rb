@@ -11,6 +11,8 @@
 #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
+#
+# Addition to the file Copyright 2018 FluxFederation.com
 
 # Reopens the `Exception` class to add a convenient way of appending user data
 # to an exception at the time of the raise.
