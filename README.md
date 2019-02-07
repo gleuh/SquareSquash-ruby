@@ -19,7 +19,7 @@ documentation at https://github.com/SquareSquash/web.
 Compatibility
 -------------
 
-This library is compatible with Ruby 1.9.2 and later, including JRuby.
+This library is compatible with Ruby 2.4.0 and later
 
 Requirements
 ------------
@@ -32,7 +32,7 @@ Usage
 -----
 
 Add the Squash client to your Gemfile with
-`gem 'squash_ruby'`. Before you can use Squash, you must configure it (see
+`gem 'squash_ruby_'`. Before you can use Squash, you must configure it (see
 **Configuration** below). At a minimum, you must specify the API host and which
 project you are recording exceptions for:
 
